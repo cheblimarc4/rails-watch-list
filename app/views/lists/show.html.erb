@@ -9,7 +9,7 @@
 <div class="container">
   <%@bookmarks.each do |card| %>
     <div class="card-book">
-    <img src="<%= card.movie.poster_url %>" alt="Movie Poster">
+    <%= cl_image_tag card.photo.key, height: 300, width: 400, crop: :fill %>
     <div class="title-rat">
         <h4><%= card.movie.title %></h4>
         <p><%= card.movie.rating %> ★</p>
