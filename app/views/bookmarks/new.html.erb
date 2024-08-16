@@ -1,0 +1,8 @@
+<div class="mx-auto mt-5" style="width:400px">
+  <h1 class="text-center">Add Movies!</h1>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <%= f.button :submit, class: "btn-primary" %>
+<% end %>
+</div>

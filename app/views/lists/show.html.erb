@@ -1,0 +1,25 @@
+<div class="banner-l" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+  <div class="container ">
+    <h1 class="banner-list"><%= @list.name %> Movies</h1>
+  </div>
+</div>
+<div>
+    <%= link_to "Add a Movie", new_list_bookmark_path(@list), class:"create-list-l" %>
+</div>
+<div class="container">
+  <%@bookmarks.each do |card| %>
+    <div class="card-book">
+    <img src="<%= card.movie.poster_url %>" alt="Movie Poster">
+    <div class="title-rat">
+        <h4><%= card.movie.title %></h4>
+        <p><%= card.movie.rating %> ★</p>
+    </div>
+    <p class="overview"><%= card.movie.overview %></p>
+    <div class="foot">
+        <h5><%= card.comment %></h5>
+        <%= link_to "Delete", bookmark_path(card), data:{turbo_method: :delete}, class:"delete-link" %>
+    </div>
+</div>
+
+
+<% end %>

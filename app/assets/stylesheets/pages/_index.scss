@@ -1,0 +1,53 @@
+// Import page-specific CSS files here.
+@import "home";
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.lists-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+.create-list {
+  color: white;
+  background-color: #73ec65;
+  padding: 20px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.card {
+  background-image: url("https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+  background-size: cover; 
+  height: 200px;
+  display: inline-block;
+  margin: 14px;
+}
+.card-title{
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding-top: 60px;
+  padding-left: 20px;
+}
